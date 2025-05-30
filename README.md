@@ -4,12 +4,19 @@
 
 <img width="521" alt="Pasted Graphic 8" src="https://github.com/user-attachments/assets/e521f344-f313-4397-a0f0-a9d60d2405cd" />
 
-Replaced result.rows.length with result.length.
+2. Replaced result.rows.length with result.length.
 
 <img width="521" alt="Pasted Graphic 10" src="https://github.com/user-attachments/assets/a1d41077-6bcd-4c8a-a9a9-a0f8ecdc9dd4" />
 
+3. The <Button> component was not imported.
+
 <img width="521" alt="Pasted Graphic 11" src="https://github.com/user-attachments/assets/64d77a24-15e8-4c8c-a526-1265bee41876" />
+
+4. Replaced Camera with CameraView.
+
 <img width="521" alt="Pasted Graphic 13" src="https://github.com/user-attachments/assets/0969325d-166f-4365-890f-a8d0f9993c3c" />
+
+5. 
 <img width="521" alt="Pasted Graphic 15" src="https://github.com/user-attachments/assets/4b9f43de-34a4-4acc-8d41-c9feecf63fd0" />
 <img width="521" alt="Pasted Graphic 12" src="https://github.com/user-attachments/assets/e9621786-f436-4ec6-843c-0a60b20a4f08" />
 <img width="521" alt="Pasted Graphic 17" src="https://github.com/user-attachments/assets/be8e7238-20c9-43c7-8ccb-03b44286f16c" />
