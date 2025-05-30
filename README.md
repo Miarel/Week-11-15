@@ -94,3 +94,39 @@ for protection
 2. A button has also been added to view details about the dish - a description of the dish.
    
 4. Added a rating and description for the dishes
+
+
+# Installation
+
+1. Clone the repository
+2. Installing dependencies:
+   ```bash
+   npm install
+    ```
+3. Start the Metro Bundler:
+   ```bash
+   npm start
+    ```
+
+Before launching, make sure that the following are installed:
+
+- Node.js
+
+- Expo CLI
+
+- Expo Go
+
+# Running the App
+
+Open a new terminal and run:
+
+for iOS:
+```bash
+npm run ios
+```
+
+for Android:
+```bash
+npm run android
+ ```
+
