@@ -24,12 +24,12 @@
 
 <img width="521" alt="Pasted Graphic 12" src="https://github.com/user-attachments/assets/e9621786-f436-4ec6-843c-0a60b20a4f08" />
 
-'''
+``` js
 filterPicker: {
     height: Platform.OS === 'ios' ? undefined : 40,
     width: '100%',
   },
-'''
+```
 
 <img width="521" alt="Pasted Graphic 17" src="https://github.com/user-attachments/assets/be8e7238-20c9-43c7-8ccb-03b44286f16c" />
 
