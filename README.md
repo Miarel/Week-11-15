@@ -17,8 +17,23 @@
 <img width="521" alt="Pasted Graphic 13" src="https://github.com/user-attachments/assets/0969325d-166f-4365-890f-a8d0f9993c3c" />
 
 5. 
+
 <img width="521" alt="Pasted Graphic 15" src="https://github.com/user-attachments/assets/4b9f43de-34a4-4acc-8d41-c9feecf63fd0" />
+
+6.
+
 <img width="521" alt="Pasted Graphic 12" src="https://github.com/user-attachments/assets/e9621786-f436-4ec6-843c-0a60b20a4f08" />
+
+7.
+
 <img width="521" alt="Pasted Graphic 17" src="https://github.com/user-attachments/assets/be8e7238-20c9-43c7-8ccb-03b44286f16c" />
+
+8.
+
 <img width="521" alt="Pasted Graphic 18" src="https://github.com/user-attachments/assets/0fd246f1-7f26-4a9a-8e9f-b0c40725a492" />
+
+9.
+
 <img width="521" alt="Pasted Graphic 19" src="https://github.com/user-attachments/assets/768e30a9-d222-49f3-944f-406db9dadd8c" />
+
+10.
