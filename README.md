@@ -16,15 +16,20 @@
 
 <img width="521" alt="Pasted Graphic 13" src="https://github.com/user-attachments/assets/0969325d-166f-4365-890f-a8d0f9993c3c" />
 
-5. 
+5. I decided to use lastInsertRowId rather than insertId to transmit the correct information instead of undefined.
 
 <img width="521" alt="Pasted Graphic 15" src="https://github.com/user-attachments/assets/4b9f43de-34a4-4acc-8d41-c9feecf63fd0" />
 
-6.
+6. I used the rows object directly, not rows._array.
 
 <img width="521" alt="Pasted Graphic 12" src="https://github.com/user-attachments/assets/e9621786-f436-4ec6-843c-0a60b20a4f08" />
 
-7.
+'''
+filterPicker: {
+    height: Platform.OS === 'ios' ? undefined : 40,
+    width: '100%',
+  },
+'''
 
 <img width="521" alt="Pasted Graphic 17" src="https://github.com/user-attachments/assets/be8e7238-20c9-43c7-8ccb-03b44286f16c" />
 
