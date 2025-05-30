@@ -15,8 +15,8 @@ const initDatabase = async () => {
     // Create tables
     await db.execAsync('PRAGMA journal_mode = WAL');
     
-    await db.withTransactionAsync(async (tx) => {
-      await tx.execAsync(
+    await db.withTransactionAsync(async () => {
+      await db.execAsync(
         `CREATE TABLE IF NOT EXISTS users (
           id INTEGER PRIMARY KEY AUTOINCREMENT, 
           email TEXT UNIQUE, 
@@ -24,14 +24,16 @@ const initDatabase = async () => {
         );`
       );
       
-      await tx.execAsync(
+      await db.execAsync(
         `CREATE TABLE IF NOT EXISTS journals (
           id INTEGER PRIMARY KEY AUTOINCREMENT, 
           userId INTEGER, 
           image TEXT, 
-          description TEXT, 
+          name TEXT,
           date TEXT, 
           category TEXT, 
+          rating TEXT,
+          description TEXT, 
           FOREIGN KEY(userId) REFERENCES users(id)
         );`
       );
@@ -53,13 +55,38 @@ const executeSql = async (query, params = []) => {
       await initDatabase();
     }
     
-    return await db.withTransactionAsync(async (tx) => {
-      return await tx.execAsync(query, params);
-    });
+
+      return await db.runAsync(query, params);
+
   } catch (error) {
     console.error('SQL execution error:', error);
     throw error;
   }
 };
 
-export { initDatabase, executeSql };
+const getAllSql = async (query, params = []) => {
+  try {
+    if (!isInitialized) {
+      await initDatabase();
+    }
+    
+    return await db.getAllAsync(query, params);
+
+  } catch (error) {
+    console.error('SQL getting data error:', error);
+    throw error;
+  }
+};
+
+const runQuery = async (query, params = []) => {
+  try {
+    if (!isInitialized) {
+      await initDatabase();
+    }
+    return await db.runAsync(query, params);
+  } catch (error) {
+    console.error('SQL mutation error:', error);
+    throw error;
+  }
+};
+export { initDatabase, executeSql, getAllSql, runQuery };

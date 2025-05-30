@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AuthScreen from './components/auth/authScreen';
 import HomeScreen from './screens/homeScreen';
 import { initDatabase } from './components/database/database';
+import DetailsScreen from './screens/detailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -57,6 +58,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="Auth" component={AuthScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

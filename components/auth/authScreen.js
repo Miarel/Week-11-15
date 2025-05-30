@@ -11,7 +11,7 @@ import {
   KeyboardAvoidingView,
   Platform
 } from 'react-native';
-import { executeSql } from '../database/database';
+import { executeSql, getAllSql, runQuery } from '../database/database';
 
 const AuthScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -42,35 +42,37 @@ const AuthScreen = ({ navigation }) => {
     try {
       if (isLogin) {
         // Login logic
-        const result = await executeSql(
+        const result = await getAllSql(
           'SELECT id FROM users WHERE email = ? AND password = ?',
           [email, password]
         );
         
-        if (result.rows.length > 0) {
-          navigation.navigate('Home', { userId: result.rows.item(0).id });
+        if (result.length > 0) {
+          navigation.navigate('Home', { userId: result[0].id });
         } else {
           Alert.alert('Authentication Failed', 'Invalid email or password');
         }
       } else {
         // Registration logic
         // First check if email exists
-        const checkResult = await executeSql(
+        const checkResult = await getAllSql(
           'SELECT id FROM users WHERE email = ?',
           [email]
         );
+        console.log('checkResult:', checkResult);
         
-        if (checkResult.rows.length > 0) {
+        if (checkResult.length > 0) {
           Alert.alert('Registration Failed', 'Email already exists');
           return;
         }
         
-        const insertResult = await executeSql(
+        const insertResult = await runQuery(
           'INSERT INTO users (email, password) VALUES (?, ?)',
           [email, password]
         );
-        
-        navigation.navigate('Home', { userId: insertResult.insertId });
+        console.log('insertResult:', insertResult);
+        console.log('Navigating with userId:', insertResult.lastInsertRowId);
+        navigation.navigate('Home', { userId: insertResult.lastInsertRowId });
       }
     } catch (error) {
       console.error('Database error:', error);
