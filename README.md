@@ -90,5 +90,7 @@ for protection
 <img width="521" alt="image" src="https://github.com/user-attachments/assets/cbc04d7f-6d42-4efd-b4fb-5932f0b504eb" />
 
 1.Some changes in the style of the buttons. 
-2. A button has also been added to view details about the dish - a description of the dish. 
-3. Added a rating and description for the dishes
+
+2. A button has also been added to view details about the dish - a description of the dish.
+   
+4. Added a rating and description for the dishes
