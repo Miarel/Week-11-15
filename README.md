@@ -89,7 +89,7 @@ for protection
 <img width="521" alt="image" src="https://github.com/user-attachments/assets/555066ec-f89e-4ecd-8c10-2107beb976b1" />
 <img width="521" alt="image" src="https://github.com/user-attachments/assets/cbc04d7f-6d42-4efd-b4fb-5932f0b504eb" />
 
-1.Some changes in the style of the buttons. 
+1. Some changes in the style of the buttons. 
 
 2. A button has also been added to view details about the dish - a description of the dish.
    
