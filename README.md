@@ -38,31 +38,32 @@ Fixed picker display for iOS.
 8. getAllAsync() for SELECT and runAsync() for INSERT/UPDATE/DELETE
    ``` js
    const getAllSql = async (query, params = []) => {
-  try {
-    if (!isInitialized) {
-      await initDatabase();
-    }
-    
-    return await db.getAllAsync(query, params);
+      try {
+        if (!isInitialized) {
+          await initDatabase();
+        }
+        
+        return await db.getAllAsync(query, params);
 
-  } catch (error) {
-    console.error('SQL getting data error:', error);
-    throw error;
-  }
-};
+      } catch (error) {
+        console.error('SQL getting data error:', error);
+        throw error;
+      }
+    };
 
-const runQuery = async (query, params = []) => {
-  try {
-    if (!isInitialized) {
-      await initDatabase();
-    }
-    return await db.runAsync(query, params);
-  } catch (error) {
-    console.error('SQL mutation error:', error);
-    throw error;
-  }
-};
-    ```
+    const runQuery = async (query, params = []) => {
+      try {
+        if (!isInitialized) {
+          await initDatabase();
+        }
+        return await db.runAsync(query, params);
+      } catch (error) {
+        console.error('SQL mutation error:', error);
+        throw error;
+      }
+    };
+
+   ```
 
 <img width="521" alt="Pasted Graphic 18" src="https://github.com/user-attachments/assets/0fd246f1-7f26-4a9a-8e9f-b0c40725a492" />
 
